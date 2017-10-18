@@ -30,4 +30,4 @@ RUN pip2 install ansible
 # Install Ansible inventory file.
 COPY hosts /etc/ansible/hosts
 
-ENTRYPOINT /bin/bash
+CMD ["/bin/bash"]
