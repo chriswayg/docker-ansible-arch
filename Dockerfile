@@ -1,9 +1,9 @@
 FROM hoverbear/archlinux:latest
 LABEL maintainer="Michael Morehouse (yawpitch)"
 
-# Install Ansible.
+# Install Make & Ansible.
 RUN pacman -S -y \
-  && pacman -S --noconfirm ansible \
+  && pacman -S --noconfirm make ansible \
   && pacman -S -c --noconfirm
 
 # Install Ansible inventory file.
