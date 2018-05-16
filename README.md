@@ -1,5 +1,6 @@
 # Arch Linux (latest) Ansible Test Image
 
+[![Build Status](https://travis-ci.org/chriswayg/docker-archlinux-ansible.svg?branch=master)](https://travis-ci.org/chriswayg/docker-archlinux-ansible)
 [![Docker Automated build](https://img.shields.io/docker/automated/chriswayg/docker-archlinux-ansible.svg)](https://hub.docker.com/r/chriswayg/docker-archlinux-ansible)
 
 Arch Linux (latest) Docker container for Ansible playbook and role testing.
