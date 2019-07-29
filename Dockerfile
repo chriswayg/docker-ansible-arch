@@ -21,7 +21,7 @@ RUN  pacman -S -y \
 RUN pacman -S -y \
   && pacman -S --noconfirm \
     python \
-    ansible 
+    ansible \
   && yes | pacman -Scc || true
 
 # Install Ansible inventory file.
