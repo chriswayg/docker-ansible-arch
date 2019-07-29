@@ -7,7 +7,7 @@ RUN  pacman -S -y \
   && pacman -S --noconfirm \
     sudo \
     systemd \
-  && yes | pacman -Scc || true
+  && yes | pacman -Scc || true \
   && \
   (cd /lib/systemd/system/sysinit.target.wants/; for i in *; do [ $i == systemd-tmpfiles-setup.service ] || rm -vf $i; done); \
     rm -vf /lib/systemd/system/multi-user.target.wants/*; \
