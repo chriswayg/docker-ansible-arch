@@ -7,7 +7,7 @@ RUN  pacman -S -y \
   && pacman -S --noconfirm \
     sudo \
     systemd \
-  #&& pacman -S -c --noconfirm
+  && yes | pacman -Scc || true
   && \
   (cd /lib/systemd/system/sysinit.target.wants/; for i in *; do [ $i == systemd-tmpfiles-setup.service ] || rm -vf $i; done); \
     rm -vf /lib/systemd/system/multi-user.target.wants/*; \
@@ -22,7 +22,7 @@ RUN pacman -S -y \
   && pacman -S --noconfirm \
     python \
     ansible 
-  #&& pacman -S -c --noconfirm
+  && yes | pacman -Scc || true
 
 # Install Ansible inventory file.
 RUN echo -e '[local]\nlocalhost ansible_connection=local' > /etc/ansible/hosts
