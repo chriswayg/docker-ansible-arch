@@ -6,15 +6,15 @@ ENV container=docker
 RUN  pacman -S -y \
   && pacman -S --noconfirm \
     sudo \
-    systemd \
-  && pacman -S -c --noconfirm
+    systemd 
+  #&& pacman -S -c --noconfirm
 
 # Install python and Ansible.
 RUN pacman -S -y \
   && pacman -S --noconfirm \
     python \
-    ansible \
-  && pacman -S -c --noconfirm
+    ansible 
+  #&& pacman -S -c --noconfirm
 
 # Install Ansible inventory file.
 RUN echo -e '[local]\nlocalhost ansible_connection=local' > /etc/ansible/hosts
